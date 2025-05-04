@@ -9,6 +9,9 @@ return {
       vim.g.vimtex_view_general_viewer = 'okular'
       vim.gvimtex_view_general_options = '--unique file:@pdf\\#src:@line@tex'
       vim.g.maplocalleader = ','
+      vim.keymap.set('n', '<F5>', ':w<CR>:VimtexCompile<CR>', {
+        buffer = true, -- Make it buffer-local (like <localleader>)
+      })
     end,
   },
 }
